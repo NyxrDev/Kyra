@@ -1,0 +1,8 @@
+{
+  "settings": {
+    "prefix": "k/",
+    "chatbot": false,
+    "channelignorestats": false,
+    "channelignore": "none"
+  }
+}

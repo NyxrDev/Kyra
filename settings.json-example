@@ -1,0 +1,15 @@
+{
+        "mongo": "Mongo DB URI",
+	"dbl": "Top.gg Auth"
+	"ownerid": "523579776749928449",
+	"modrolename": "Moderator",
+	"adminrolename": "Admin",
+	"managerrolename": "Manager",
+	"overlordrolename": "Owner",
+	"hooks": "Webhook URL",
+	"prefix": "k/",
+	"joinh": "Webhook",
+	"token": "Bot Token",		
+        "pings" : "Webhook URL",
+}
+
