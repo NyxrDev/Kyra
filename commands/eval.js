@@ -1,5 +1,6 @@
+// 523579776749928449
 const Discord = require('discord.js');
-const config = require("../config.json");
+const config = require("../settings.json");
 function clean(text) {
     if (typeof(text) === "string")
         return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
@@ -7,7 +8,7 @@ function clean(text) {
         return text;
 }
 exports.run = (client, message, args) => {
-    if (message.author.id !== '523579776749928449') return;
+    if (!config.ownerid.includes(message.author.id)) return;
     args = args.join(" ");
     try {
 var evaled = eval(args);

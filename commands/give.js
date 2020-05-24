@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const settings = require('../settings.json');
+const config = require('../settings.json');
 //const mysql = require('mysql');
 //const file = require('../mysql.json');
 const customisation = require('../customisation.json');
@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 exports.run = async (client, message, args) => {
   const Coins = require('../models/coins.js');
-  if (message.author.id !== "523579776749928449") return message.channel.send("You lack perms to use this (owner only)");
+  if (!config.ownerid.includes(message.author.id)) return message.channel.send("You lack perms to use this (owner only)");
   let user = message.mentions.users.first() || client.users.cache.get(args[0]);
   if (!user) return message.channel.send("You must an id of someone to given them!");
   if(!args[1]) return message.channel.send("You need to specify an ammount");

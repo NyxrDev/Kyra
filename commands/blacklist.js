@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 const fs = require('fs');
 const customisation = require('../customisation.json');
-
+const config = require("../settings.json");
 exports.run = async (client, message, args) => {
-  if (!message.author.id === '523579776749928449') return message.reply("You don't have the permission to use this command...:facepalm:");
+  if (!config.ownerid.includes(message.author.id)) return message.reply("You don't have the permission to use this command...:facepalm:");
     //message.delete();
     let blacklist = JSON.parse(fs.readFileSync("./blacklist.json", "utf8"));
     let user = args[0];
@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
         fs.writeFile("./blacklist.json", JSON.stringify(blacklist), err => {
             if(err) throw err;
           });
-        
+
         client.guilds.forEach((guild) => {
         if(guild.ownerID === user) {
           message.guild.leave(guild.id)

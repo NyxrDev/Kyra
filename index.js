@@ -50,7 +50,7 @@ client.reload = command => {
   });
 };
 
-mongoose.connect('mongodb+srv://username:11mom2001@cluster0-ruh7t.azure.mongodb.net', { useNewUrlParser: true, useUnifiedTopology: true   }, err => {
+mongoose.connect(settings.mongo, { useNewUrlParser: true, useUnifiedTopology: true   }, err => {
 
     if (err) return console.error(err);
     console.log(chalk.bgGreen.black('Connected to MongoDB database!'));
