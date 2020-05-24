@@ -1,7 +1,7 @@
 {
         "mongo": "Mongo DB URI",
 	"dbl": "Top.gg Auth"
-	"ownerid": "523579776749928449",
+	"ownerid": ["Owner1", "Owner2"],
 	"modrolename": "Moderator",
 	"adminrolename": "Admin",
 	"managerrolename": "Manager",
