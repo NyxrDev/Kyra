@@ -16,7 +16,7 @@
   "env": {
     "token": {
       "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": "secret"
+      "value": "token"
     },
     "prefix": {
       "description": "The bots prefix to run commands",
