@@ -50,7 +50,7 @@ client.reload = command => {
   });
 };
 
-mongoose.connect(settings.mongo, { useNewUrlParser: true, useUnifiedTopology: true   }, err => {
+mongoose.connect(process.env.mongo, { useNewUrlParser: true, useUnifiedTopology: true   }, err => {
 
     if (err) return console.error(err);
     console.log(chalk.bgGreen.black('Connected to MongoDB database!'));
@@ -74,5 +74,5 @@ client.elevation = message => {
 //  console.log(e.replace(regToken, 'that was redacted'));
 //});
 
-client.login(settings.token);
+client.login(process.env.token);
 deletes.leavex(client);
