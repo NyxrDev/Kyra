@@ -1,52 +1,45 @@
 {
-    "name": "kyra",
-    "description": "Kyra is a multipurpose bot",
-    "keywords": [
-        "Heroku",
-        "Discord Bot",
-        "Entertainment",
-        "Moderation",
-        "JavaScript",
-        "Selfhosting"
-    ],
-    "website": "https://smiles.ga/",
-    "repository": "https://github.com/NyxrDev/Kyra",
-    "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F3a%2F66%2F29%2F3a662940e77484874c2fcdc9f1359208--hottest-women-happy-day.jpg&f=1&nofb=1",
-    "success_url": "/",
-    "scripts": {
-      "postdeploy": "bundle exec rake bootstrap"
+  "name": "KyraBot",
+  "description": "This app does one little thing, and does it well.",
+  "keywords": [
+    "productivity",
+    "HTML5",
+    "scalpel"
+  ],
+  "website": "https://smiles.ga/",
+  "repository": "https://github.com/NyxrDev/Kyra/",
+  "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.izismile.com%2Fimg%2Fimg12%2F20190411%2Fgifs%2Fgifs_of_really_hot_girls_17.gif&f=1&nofb=1",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "bundle exec rake bootstrap"
   },
-    "env": {
-        "token": {
-            "description": "Sets the bots token!",
-            "required": true,
-            "value": "TOKEN"
-        },
-        "prefix": {
-            "description": "Sets the prefix",
-            "required": true,
-            "value": "!, ?, & ..."
-       },
-       "ownerid": {
-            "description": "Developers ID",
-            "required": true,
-            "value": "665273645118274651"
-        },
-        "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-        },
-        "buildpacks": [
-        {
-            "url": "https://github.com/heroku/heroku-buildpack-nodejs"
-        },
-        {
-            "url": "https://github.com/amivin/ffmpeg-heroku.git"
-        }
-],
-   "environments": {
+  "env": {
+    "token": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "prefix": {
+      "description": "The bots prefix to run commands",
+      "value": ">"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "image": "heroku/nodejs",
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    },
+    {
+      "url": "https://github.com/amivin/ffmpeg-heroku.git"
+    }
+  ],
+  "environments": {
     "test": {
       "scripts": {
         "test": "bundle exec rake test"
