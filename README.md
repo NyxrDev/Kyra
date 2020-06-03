@@ -13,4 +13,4 @@
 ### - Packed with commands that could be useful when you want to role-play, or just do some research on some anime, heck even do some small math equation, I can help with whatever you need that i can assist with!
 ### - Need utilities? Well i have tons! Including URL related ones that can shorten OR expand URL links! So yes, I am a sure to impress being.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/NyxrDev/Kyra)
