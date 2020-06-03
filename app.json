@@ -18,6 +18,10 @@
       "description": "A secret key for verifying the integrity of signed cookies.",
       "value": "token"
     },
+     "mongodb": {
+      "description": "URI for mongodb.",
+      "value": "mongouri"
+    },
     "prefix": {
       "description": "The bots prefix to run commands",
       "value": ">"
