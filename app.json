@@ -14,8 +14,8 @@
     "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F3a%2F66%2F29%2F3a662940e77484874c2fcdc9f1359208--hottest-women-happy-day.jpg&f=1&nofb=1",
     "success_url": "/",
     "scripts": {
-      "start": "node index.js"
-    },
+      "postdeploy": "bundle exec rake bootstrap"
+  },
     "env": {
         "token": {
             "description": "Sets the bots token!",
@@ -45,5 +45,12 @@
         {
             "url": "https://github.com/amivin/ffmpeg-heroku.git"
         }
-]
+],
+   "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
+  }
 }
